@@ -1,0 +1,54 @@
+{
+  "name": "eslint-plugin-sort-declarations",
+  "version": "0.0.0",
+  "description": "An ESLint plugin to sort module-level and block-level declarations.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "sort",
+    "declarations",
+    "variables",
+    "exports",
+    "module"
+  ],
+  "author": "Uphold",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": "github:uphold/eslint-plugin-sort-declarations",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint .",
+    "release": "release-it",
+    "test": "node --test tests/sort-*.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "8.57.0",
+    "@typescript-eslint/parser": "8.22.0",
+    "@uphold/github-changelog-generator": "^4.0.2",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.1",
+    "release-it": "^21.0.2"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "peerDependencies": {
+    "eslint": ">=8"
+  },
+  "license": "MIT"
+}
